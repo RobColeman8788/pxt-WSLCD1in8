@@ -26,7 +26,6 @@ namespace LCD1IN8 {
     //%
     void LCD_Clear() {
         LCD->LCD_Clear(WHITE);
-		LCD->LCD_ClearBuf();
     }
     
     //%
