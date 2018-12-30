@@ -282,6 +282,14 @@ void LCD_Driver::LCD_Clear(UWORD Color)
 {
     LCD_SetWindows(0, 0, LCD_WIDTH, LCD_HEIGHT);
     LCD_SetColor(Color, LCD_WIDTH + 2, LCD_HEIGHT + 2);
+    
+    UWORD x, y;
+    for (y = 0; y < 128; y++) {
+        for (x = 0; x < 160; x++ ) {//1 pixel = 2 byte
+            spiram->SPIRAM_WR_Byte((x + y * 160)* 2, Color >> 8);
+            spiram->SPIRAM_WR_Byte((x + y * 160)* 2 + 1, Color);
+        }
+    }
 }
 
 void LCD_Driver::LCD_ClearBuf()
