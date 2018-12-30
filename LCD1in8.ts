@@ -78,7 +78,7 @@ namespace LCD1IN8{
 
     //% blockId=DrawPoint
     //% blockGap=8
-    //% block="Draw Point|x %x|y %y|Colour %Color|Point Size %Dot"
+    //% block="Draw Point|x %x|y %y|Colur %Color|Point Size %Dot"
     //% shim=LCD1IN8::DrawPoint
     //% weight=150
     export function DrawPoint(x: number, y: number, Color: number, Dot: DOT_PIXEL): void {
