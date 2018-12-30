@@ -31,7 +31,7 @@ namespace LCD1IN8{
 
     //% blockId=LCD_Filling
     //% blockGap=8
-    //% block="Filling Color %Color"
+    //% block="Filling screen and cache with Color %Color"
     //% shim=LCD1IN8::LCD_Filling
     //% weight=194
     export function LCD_Filling(Color: number): void {
