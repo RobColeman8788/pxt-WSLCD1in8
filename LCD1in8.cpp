@@ -35,7 +35,7 @@ namespace LCD1IN8 {
 	
     //%
     void LCD_WriteData(UBYTE value) {
-	LCD->LCD_WriteData(value);
+	LCD->LCD_WriteData_8Bit(value);
     }
     
     //%
