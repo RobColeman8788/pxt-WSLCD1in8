@@ -95,6 +95,27 @@ namespace LCD1IN8{
     export function LCD_SetBL(Lev: number): void {
         return;
     }
+    
+    //% blockId=SetScrollOffset
+    //% blockGap=8
+    //% block="Set LCD scroll offset %RegVal"
+    //% shim=LCD1IN8::SetScrollOffset
+    //% RegVal.min=0 RegVal.max=255
+    //% weight=170
+    export function SetScrollOffset(RegVal: number): void {
+        return;
+    }
+    
+    //% blockId=DefineScrollArea
+    //% blockGap=8
+    //% block="Define scroll area|top %TopVal|bottom %BotVal"
+    //% shim=LCD1IN8::DefineScrollArea
+    //% TopVal.min=0 TopVal.max=162
+    //% BotVal.min=0 BotVal.max=162
+    //% weight=160
+    export function SetScrollOffset(TopVal: number, BotVal: number): void {
+        return;
+    }
 
     //% blockId=DrawPoint
     //% blockGap=8
