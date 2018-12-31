@@ -75,6 +75,8 @@ public:
 	void LCD_Init(void);
 	
 	void LCD_SetBL(int Lev);
+	
+	void LCD_WriteReg(UBYTE reg, UBYTE data);
 
     void LCD_Clear(UWORD Color);
     void LCD_ClearBuf(void);
