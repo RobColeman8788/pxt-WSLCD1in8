@@ -73,6 +73,10 @@ public:
 	
     void LCD_Init(void);
 	
+    void SetScrollOffset(int offset);
+    	
+    void DefineScrollArea(int start, int end);	
+	
     void LCD_SetBL(int Lev);
 	
     void LCD_WriteReg(UBYTE reg);
