@@ -29,8 +29,13 @@ namespace LCD1IN8 {
     }
 	
     //%
-    void LCD_WriteReg(UBYTE reg, UBYTE data) {
-        LCD->LCD_WriteReg(reg, data);
+    void LCD_WriteReg(UBYTE reg) {
+        LCD->LCD_WriteReg(reg);
+    }
+	
+    //%
+    void LCD_WriteData(UBYTE value) {
+	LCD->LCD_WriteData(value);
     }
     
     //%
