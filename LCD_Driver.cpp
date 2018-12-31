@@ -75,16 +75,6 @@ void LCD_Driver::LCD_WriteReg(UBYTE Reg)
     LCD_CS_1;
 }
 
-void LCD_Driver::LCD_WriteReg(UBYTE Reg, UBYTE Data)
-{
-    LCD_DC_0;
-    LCD_CS_0;
-    LCD_SPI_Write_Byte(Reg);
-    LCD_DC_1;
-    LCD_SPI_Write_Byte(Data);
-    LCD_CS_1;    
-}
-
 void LCD_Driver::LCD_WriteData_8Bit(UBYTE Data)
 {
     LCD_DC_1;
