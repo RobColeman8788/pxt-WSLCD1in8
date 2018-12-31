@@ -113,7 +113,7 @@ namespace LCD1IN8{
     //% TopVal.min=0 TopVal.max=162
     //% BotVal.min=0 BotVal.max=162
     //% weight=160
-    export function SetScrollOffset(TopVal: number, BotVal: number): void {
+    export function DefineScrollArea(TopVal: number, BotVal: number): void {
         return;
     }
 
