@@ -57,10 +57,11 @@ enum DRAW_FILL {
 };
 
 class LCD_Driver{
-private:
-	void LCD_SPI_Init(void);
-	void LCD_Reset(void);
-	void LCD_InitReg(void);
+public:
+
+    void LCD_SPI_Init(void);
+    void LCD_Reset(void);
+    void LCD_InitReg(void);
 	
     void LCD_WriteData_Buf(UWORD Buf,unsigned long Len);
 
@@ -68,15 +69,15 @@ private:
     void LCD_SetCursor(UWORD X, UWORD Y);
     void LCD_SetColor(UWORD Color ,UWORD Xnum, UWORD Ynum);
 	
-	void LCD_SetPoint(UWORD Xpoint, UWORD Ypoint, UWORD Color);
-public:
-	void LCD_Init(void);
+    void LCD_SetPoint(UWORD Xpoint, UWORD Ypoint, UWORD Color);
 	
-	void LCD_SetBL(int Lev);
+    void LCD_Init(void);
 	
-	void LCD_WriteReg(UBYTE reg);
+    void LCD_SetBL(int Lev);
 	
-	void LCD_WriteData_8Bit(UBYTE Data);
+    void LCD_WriteReg(UBYTE reg);
+	
+    void LCD_WriteData_8Bit(UBYTE Data);
 
     void LCD_Clear(UWORD Color);
     void LCD_ClearBuf(void);
