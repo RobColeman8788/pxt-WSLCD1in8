@@ -53,10 +53,20 @@ namespace LCD1IN8 {
         LCD->LCD_DisplayWindows(Xstart, Ystart, Xend, Yend);
     }
 	
-	//%
+    //%
     void LCD_SetBL(int Lev) {
         LCD->LCD_SetBL(Lev);
     }
+	
+    //%
+    void SetScrollOffset(int offset) {
+        LCD->SetScrollOffset(offset);
+    }
+
+    //%
+    void DefineScrollArea(int start, int end) {
+        LCD->DefineScrollArea(start, end);
+    }	
 	
     //%
     void DrawPoint(int x, int y, int Color, DOT_PIXEL Dot) {
