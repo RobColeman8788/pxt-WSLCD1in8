@@ -274,6 +274,26 @@ void LCD_Driver::LCD_SetBL(int Lev)
     LCD_BL.write(light);
 }
 
+void LCD_Driver::SetScrollOffset(int offset)
+{
+    // set scrolling offset register VSCSAD  
+    LCD_WriteReg(0x37);
+    LCD_WriteData_8Bit(0x00);
+    LCD_WriteData_8Bit(offset);
+}
+
+void LCD_Driver::DefineScrollArea(int start, int end)
+{
+    // define scroll area using SCRLAR register
+    LCD_WriteReg(0x33);
+    LCD_WriteData_8Bit(0x00);
+    LCD_WriteData_8Bit(start);
+    LCD_WriteData_8Bit(0x00);
+    LCD_WriteData_8Bit(end - start);
+    LCD_WriteData_8Bit(0x00);
+    LCD_WriteData_8Bit(162 - end);
+}
+
 /********************************************************************************
 function:
     Clear screen
