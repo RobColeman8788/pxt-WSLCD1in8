@@ -27,6 +27,11 @@ namespace LCD1IN8 {
     void LCD_Clear() {
         LCD->LCD_Clear(WHITE);
     }
+	
+    //%
+    void LCD_WriteReg(UBYTE reg, UBYTE data) {
+        LCD->LCD_WriteReg(reg, data);
+    }
     
     //%
     void LCD_Filling(int Color) {
