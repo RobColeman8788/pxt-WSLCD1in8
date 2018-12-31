@@ -40,7 +40,7 @@ namespace LCD1IN8{
     
     //% blockId=LCD_WriteReg
     //% blockGap=8
-    //% block="Write to LCD register %Register"
+    //% block="Select LCD register %Register"
     //% shim=LCD1IN8::LCD_WriteReg
     //% Register.min=0 Register.max=255
     //% weight=193
