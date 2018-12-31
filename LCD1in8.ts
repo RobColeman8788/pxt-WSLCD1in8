@@ -40,12 +40,21 @@ namespace LCD1IN8{
     
     //% blockId=LCD_WriteReg
     //% blockGap=8
-    //% block="Write to LCD register |Register %Register |Value %Value "
+    //% block="Write to LCD register %Register"
     //% shim=LCD1IN8::LCD_WriteReg
     //% Register.min=0 Register.max=255
-    //% Value.min=0 Value.max=255
     //% weight=193
-    export function LCD_WriteReg(Register: number, Value: number): void {
+    export function LCD_WriteReg(Register: number): void {
+        return;
+    }
+    
+    //% blockID=LCD_WriteData
+    //% blockGap=8
+    //% block="Write data to selected LCD register %Value"
+    //% shim=LCD1IN8::LCD_WriteReg
+    //% Value.min=0 Value.max=255
+    //% weight=192
+    export function LCD_WriteData(Value: number): void {
         return;
     }
 
