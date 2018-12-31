@@ -62,7 +62,6 @@ private:
 	void LCD_Reset(void);
 	void LCD_InitReg(void);
 	
-    void LCD_WriteData_8Bit(UBYTE Data);
     void LCD_WriteData_Buf(UWORD Buf,unsigned long Len);
 
     void LCD_SetWindows(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend);
@@ -77,7 +76,7 @@ public:
 	
 	void LCD_WriteReg(UBYTE reg);
 	
-	void LCD_WriteData(UBYTE value);
+	void LCD_WriteData_8Bit(UBYTE Data);
 
     void LCD_Clear(UWORD Color);
     void LCD_ClearBuf(void);
