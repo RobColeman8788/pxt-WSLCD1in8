@@ -124,6 +124,7 @@ namespace LCD1IN8{
     //% Id.min=0 Id.max=127
     //% Width.min=1 Width.max=16
     //% Height.min=1 Height.max=16
+    //% Data.shadowOptions.toString=true
     //% weight=159
     export function CreateSprite(Id: number, Width: number, Height: number, Data: string): void {
         return;
