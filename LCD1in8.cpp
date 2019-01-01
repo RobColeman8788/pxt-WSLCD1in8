@@ -69,6 +69,16 @@ namespace LCD1IN8 {
     }	
 	
     //%
+    void CreateSprite(int id, int width, int height, UBYTE data[]) {
+        LCD->CreateSprite(id, width, height, data);
+    }		
+	 
+    //%
+    void PlotSprite(int id, int x, int y) {
+        LCD->PlotSprite(id, x, y);
+    }		 
+	
+    //%
     void DrawPoint(int x, int y, int Color, DOT_PIXEL Dot) {
         LCD->LCD_DrawPoint(x, y, Dot, Color);
     }
