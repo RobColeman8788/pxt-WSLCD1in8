@@ -14,7 +14,7 @@
 
 //data
 #define BYTE   unsigned char
-#define WORD   unsigned short
+#define WORD   unsigned int
 
 // SRAM opcodes
 #define CMD_WREN  0x06
