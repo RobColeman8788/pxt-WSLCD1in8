@@ -116,6 +116,30 @@ namespace LCD1IN8{
     export function DefineScrollArea(TopVal: number, BotVal: number): void {
         return;
     }
+    
+    //% blockId=CreateSprite
+    //% blockGap=8
+    //% block="CreateSprite|id %Id|width %Width|Height %Height|Data %SpriteData"
+    //% shim=LCD1IN8::CreateSprite
+    //% Id.min=0 Id.max=127
+    //% Width.min=1 Width.max=16
+    //% Height.min=1 Height.max=16
+    //% weight=159
+    export function CreateSprite(Id: number, Width: number, Height: number, Data: string): void {
+        return;
+    }
+    
+    //% blockId=PlotSprite
+    //% blockGap=8
+    //% block="PlotSprite|id %Id|x %x|y %y"
+    //% shim=LCD1IN8::PlotSprite
+    //% Id.min=0 Id.max=127
+    //% x.min=1 x.max=160
+    //% y.min=1 y.max=128
+    //% weight=158
+    export function CreateSprite(Id: number, Width: number, Height: number, Data: string): void {
+        return;
+    }
 
     //% blockId=DrawPoint
     //% blockGap=8
