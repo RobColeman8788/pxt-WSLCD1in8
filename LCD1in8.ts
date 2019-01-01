@@ -137,7 +137,7 @@ namespace LCD1IN8{
     //% x.min=1 x.max=160
     //% y.min=1 y.max=128
     //% weight=158
-    export function CreateSprite(Id: number, Width: number, Height: number, Data: string): void {
+    export function PlotSprite(Id: number, x: number, y: number): void {
         return;
     }
 
