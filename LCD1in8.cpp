@@ -69,7 +69,7 @@ namespace LCD1IN8 {
     }	
 	
     //%
-    void CreateSprite(int id, int width, int height, UBYTE data[]) {
+    void CreateSprite(int id, int width, int height, String data) {
         LCD->CreateSprite(id, width, height, data);
     }		
 	 
