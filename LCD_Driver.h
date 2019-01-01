@@ -77,6 +77,10 @@ public:
     	
     void DefineScrollArea(int start, int end);	
 	
+    void CreateSprite(int id, int width, int height, String data);
+	
+    void PlotSprite(int id, int x, int y);	
+	
     void LCD_SetBL(int Lev);
 	
     void LCD_WriteReg(UBYTE reg);
