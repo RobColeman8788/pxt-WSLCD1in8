@@ -60,7 +60,7 @@ BYTE SPIRAM::SPIRAM_RD_Byte(WORD Addr)
     SPIRAM_CS_0;
     SPIRAM_SPI_Write_Byte(CMD_READ);
 
-    SPIRAM_SPI_Write_Byte(0X00);
+    SPIRAM_SPI_Write_Byte((BYTE)((Addr >> 16) & 1));
     SPIRAM_SPI_Write_Byte((BYTE)(Addr >> 8));
     SPIRAM_SPI_Write_Byte((BYTE)Addr);
     
@@ -77,7 +77,7 @@ void SPIRAM::SPIRAM_WR_Byte(WORD Addr, const BYTE Data)
 
     SPIRAM_SPI_Write_Byte(CMD_WRITE);
 
-    SPIRAM_SPI_Write_Byte(0X00);
+    SPIRAM_SPI_Write_Byte((BYTE)((Addr >> 16) & 1));
     SPIRAM_SPI_Write_Byte((BYTE)(Addr >> 8));
     SPIRAM_SPI_Write_Byte((BYTE)Addr);
     
@@ -99,7 +99,7 @@ void SPIRAM::SPIRAM_RD_Page(WORD Addr, BYTE *pBuf)
     SPIRAM_CS_0;
     SPIRAM_SPI_Write_Byte(CMD_READ);
     
-    SPIRAM_SPI_Write_Byte(0X00);
+    SPIRAM_SPI_Write_Byte((BYTE)((Addr >> 16) & 1));
     SPIRAM_SPI_Write_Byte((BYTE)(Addr >> 8));
     SPIRAM_SPI_Write_Byte((BYTE)Addr);
     
@@ -118,7 +118,7 @@ void SPIRAM::SPIRAM_WR_Page(WORD Addr, BYTE *pBuf)
     SPIRAM_CS_0;
     SPIRAM_SPI_Write_Byte(CMD_WRITE);
     
-    SPIRAM_SPI_Write_Byte(0X00);
+    SPIRAM_SPI_Write_Byte((BYTE)((Addr >> 16) & 1));
     SPIRAM_SPI_Write_Byte((BYTE)(Addr >> 8));
     SPIRAM_SPI_Write_Byte((BYTE)Addr);
     
@@ -141,7 +141,7 @@ void SPIRAM::SPIRAM_RD_Stream(WORD Addr, BYTE *pBuf, unsigned long Len)
     SPIRAM_CS_0;
     SPIRAM_SPI_Write_Byte(CMD_READ);
 
-    SPIRAM_SPI_Write_Byte(0X00);
+    SPIRAM_SPI_Write_Byte((BYTE)((Addr >> 16) & 1));
     SPIRAM_SPI_Write_Byte((BYTE)(Addr >> 8));
     SPIRAM_SPI_Write_Byte((BYTE)Addr);
     
@@ -160,7 +160,7 @@ void SPIRAM::SPIRAM_WR_Stream(WORD Addr, BYTE *pBuf, unsigned long Len)
     SPIRAM_CS_0;
     SPIRAM_SPI_Write_Byte(CMD_WRITE);
     
-    SPIRAM_SPI_Write_Byte(0X00);
+    SPIRAM_SPI_Write_Byte((BYTE)((Addr >> 16) & 1));
     SPIRAM_SPI_Write_Byte((BYTE)(Addr >> 8));
     SPIRAM_SPI_Write_Byte((BYTE)Addr);
     
